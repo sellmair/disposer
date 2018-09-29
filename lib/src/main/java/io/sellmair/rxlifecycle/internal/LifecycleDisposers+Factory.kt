@@ -11,6 +11,7 @@ import io.sellmair.rxlifecycle.LifecycleDisposers
 INTERNAL IMPLEMENTATION: LifecycleDisposers.Factory
 ################################################################################################
 */
+
 internal fun LifecycleDisposers.Factory.create(lifecycle: Lifecycle): LifecycleDisposers {
     return LifecycleDisposers(
         onCreate = LifecycleDisposer(lifecycle, Lifecycle.Event.ON_CREATE),
@@ -18,6 +19,5 @@ internal fun LifecycleDisposers.Factory.create(lifecycle: Lifecycle): LifecycleD
         onResume = LifecycleDisposer(lifecycle, Lifecycle.Event.ON_RESUME),
         onPause = LifecycleDisposer(lifecycle, Lifecycle.Event.ON_PAUSE),
         onStop = LifecycleDisposer(lifecycle, Lifecycle.Event.ON_STOP),
-        onDestroy = LifecycleDisposer(lifecycle, Lifecycle.Event.ON_DESTROY)
-    )
+        onDestroy = LifecycleDisposer(lifecycle, Lifecycle.Event.ON_DESTROY))
 }

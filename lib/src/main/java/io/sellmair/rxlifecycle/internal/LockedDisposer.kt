@@ -7,7 +7,13 @@ import io.sellmair.rxlifecycle.Disposer
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 
-class LockedDisposer : Disposer {
+/*
+################################################################################################
+INTERNAL API
+################################################################################################
+*/
+
+internal class LockedDisposer : Disposer {
 
     private val lock = ReentrantLock()
 

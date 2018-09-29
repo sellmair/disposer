@@ -4,12 +4,17 @@ import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.OnLifecycleEvent
-import io.reactivex.disposables.Disposables
 import io.sellmair.rxlifecycle.Disposer
 
 
-class LifecycleDisposer(
-    private val lifecycle: Lifecycle,
+/*
+################################################################################################
+INTERNAL API
+################################################################################################
+*/
+
+internal class LifecycleDisposer(
+    lifecycle: Lifecycle,
     vararg events: Lifecycle.Event) : Disposer by LockedDisposer() {
 
     private val observer: LifecycleObserver = object : LifecycleObserver {
@@ -23,8 +28,5 @@ class LifecycleDisposer(
 
     init {
         lifecycle.addObserver(observer)
-        this += Disposables.fromRunnable {
-            lifecycle.removeObserver(observer)
-        }
     }
 }

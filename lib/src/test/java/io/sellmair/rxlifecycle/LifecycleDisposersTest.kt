@@ -5,6 +5,7 @@ import android.arch.lifecycle.LifecycleRegistry
 import io.reactivex.subjects.PublishSubject
 import io.sellmair.rxlifecycle.internal.get
 import org.junit.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 
@@ -22,7 +23,7 @@ class LifecycleDisposersTest {
     fun store_returnsSameInstance() {
         val instance1 = LifecycleDisposers.Store[lifecycle]
         val instance2 = LifecycleDisposers.Store[lifecycle]
-        Assert.assertEquals(instance1, instance2)
+        assertEquals(instance1, instance2)
     }
 
     @Test
@@ -39,7 +40,7 @@ class LifecycleDisposersTest {
         lifecycle.handleLifecycleEvent(Lifecycle.Event.ON_START)
         subject.onNext(Unit)
 
-        Assert.assertEquals(1, observer.nextCount)
+        assertEquals(1, observer.nextCount)
     }
 
     @Test
@@ -55,6 +56,6 @@ class LifecycleDisposersTest {
         lifecycle.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
         subject.onNext(Unit)
 
-        Assert.assertEquals(2, observer.nextCount)
+        assertEquals(2, observer.nextCount)
     }
 }
