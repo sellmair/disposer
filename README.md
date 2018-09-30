@@ -1,6 +1,9 @@
 ## RxLifecycle
-
 Easily dispose RxJava streams with Android's Lifecycle
+
+![GitHub top language](https://img.shields.io/github/languages/top/sellmair/rxlifecycle.svg)
+[![Build Status](https://travis-ci.org/sellmair/rxlifecycle.svg?branch=master)](https://travis-ci.org/sellmair/rxlifecycle)
+![Bintray](https://img.shields.io/bintray/v/sellmair/sellmair/rxlifecycle.svg)
 
 ### Usage
 
