@@ -15,7 +15,7 @@ dependencies {
 }
 ```
 
-
+<br>
 
 ##### Disposer
 A ```Disposer``` is the object managing multiple ```Disposable``` instances and disposes them
@@ -43,7 +43,7 @@ val disposer: Disposer = /* ... */
 Service.queryAwesomeData().subscribe().disposeBy(disposer) // Managed by the disposer
 ```
 
-
+<br>
 
 ##### Get the correct ```Disposer```
 
@@ -71,6 +71,10 @@ class MyCoolComponent: LifecycleOwner {
 ```
 
 Which leads to very concise and readable API's inside your ```Activity``` or ```Fragment``` classes:
+
+
+<br>
+
 
 ##### Example:
 
