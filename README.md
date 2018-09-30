@@ -110,3 +110,22 @@ awesomDataProvider.query()
     .disposeBy(onStop) // <--- Will dispose everything above it when .onStop() is called
     .subscribe(::displayAwesomeData)
 ```
+
+
+##### Create you own Disposer
+
+You can easily create your own ```Disposer``` by calling
+
+```kotlin
+val disposer = Disposer.create()
+```
+
+Each call of 
+```kotlin
+disposer.dispose()
+```
+
+Will dispose all currently managed disposables and reset the ```Disposer```
+
+⚠️ Be aware: This behaviour differs from ```CompositeDisposable``` and actually
+is more like ```CompositeDisposable.clear```. 
