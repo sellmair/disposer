@@ -12,7 +12,6 @@ buildscript {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
 
-
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -40,4 +39,3 @@ if (!project.hasProperty("bintray_apikey")) {
 if (!project.hasProperty("bintray_gpg_password")) {
     ext.bintray_gpg_password = "stub"
 }
-
