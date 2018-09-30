@@ -6,7 +6,7 @@ apply plugin: 'maven-publish'
 ext {
     bintrayRepo = 'sellmair'
     bintrayName = 'rxlifecycle'
-    libraryVersion = '1.0.0-alpha.0'
+    libraryVersion = '1.0.0-alpha.1'
 
     publishedGroupId = 'io.sellmair'
     libraryName = 'rxlifecycle'

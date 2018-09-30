@@ -8,7 +8,7 @@ Easily dispose RxJava streams with Android's Lifecycle
 
 ```groovy
 dependencies {
-    implementation 'io.sellmair:rxlifecycle:1.0.0-alpha.0'
+    implementation 'io.sellmair:rxlifecycle:1.0.0-alpha.1'
 }
 ```
 
