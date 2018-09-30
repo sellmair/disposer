@@ -10,14 +10,6 @@ Easily dispose RxJava streams with Android's Lifecycle
 ##### Gradle
 
 ```groovy
-
-// Don't worry, coming to jcenter soon!
-allprojects {
-    repositories {
-        maven { url "https://dl.bintray.com/sellmair/sellmair/" }
-    }
-}
-
 dependencies {
     implementation 'io.sellmair:disposer:1.0.0-alpha.1'
 }
