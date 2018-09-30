@@ -2,6 +2,7 @@ package io.sellmair.rxlifecycle
 
 import io.reactivex.*
 import io.reactivex.disposables.Disposable
+import io.sellmair.rxlifecycle.internal.LockedDisposer
 
 
 /**
@@ -54,6 +55,11 @@ interface Disposer : Disposable {
      * Will dispose the upstream once this disposer receives a [dispose] signal
      */
     fun bind(completable: Completable): Completable
+
+
+    companion object {
+        fun create(): Disposer = LockedDisposer()
+    }
 }
 
 
