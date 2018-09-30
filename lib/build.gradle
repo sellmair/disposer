@@ -5,17 +5,17 @@ apply plugin: 'maven-publish'
 
 ext {
     bintrayRepo = 'sellmair'
-    bintrayName = 'rxlifecycle'
+    bintrayName = 'disposer'
     libraryVersion = '1.0.0-alpha.1'
 
     publishedGroupId = 'io.sellmair'
-    libraryName = 'rxlifecycle'
-    artifact = 'rxlifecycle'
+    libraryName = 'disposer'
+    artifact = 'disposer'
 
     libraryDescription = 'Reactive Lifecycle Extensions for Android'
 
-    gitUrl = 'https://github.com/sellmair/rxlifecycle'
-    siteUrl = 'https://github.com/sellmair/rxlifecycle'
+    gitUrl = 'https://github.com/sellmair/disposer'
+    siteUrl = 'https://github.com/sellmair/disposer'
 
 
 

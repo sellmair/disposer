@@ -1,9 +1,9 @@
-package io.sellmair.rxlifecycle.internal
+package io.sellmair.disposer.internal
 
 import io.reactivex.*
 import io.reactivex.disposables.Disposable
 import io.reactivex.disposables.Disposables
-import io.sellmair.rxlifecycle.Disposer
+import io.sellmair.disposer.Disposer
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 

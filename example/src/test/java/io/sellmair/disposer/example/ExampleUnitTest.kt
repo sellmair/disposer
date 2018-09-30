@@ -1,4 +1,4 @@
-package io.sellmair.rxlifecycle.example
+package io.sellmair.disposer.example
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

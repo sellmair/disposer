@@ -1,7 +1,7 @@
-package io.sellmair.rxlifecycle
+package io.sellmair.disposer
 
 import io.reactivex.disposables.Disposables
-import io.sellmair.rxlifecycle.internal.LockedDisposer
+import io.sellmair.disposer.internal.LockedDisposer
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before

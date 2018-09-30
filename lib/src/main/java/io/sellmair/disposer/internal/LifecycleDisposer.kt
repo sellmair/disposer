@@ -1,10 +1,10 @@
-package io.sellmair.rxlifecycle.internal
+package io.sellmair.disposer.internal
 
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.OnLifecycleEvent
-import io.sellmair.rxlifecycle.Disposer
+import io.sellmair.disposer.Disposer
 
 
 /*

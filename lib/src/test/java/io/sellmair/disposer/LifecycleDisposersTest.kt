@@ -1,9 +1,9 @@
-package io.sellmair.rxlifecycle
+package io.sellmair.disposer
 
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleRegistry
 import io.reactivex.subjects.PublishSubject
-import io.sellmair.rxlifecycle.internal.get
+import io.sellmair.disposer.internal.get
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

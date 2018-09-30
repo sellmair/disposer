@@ -1,11 +1,11 @@
-package io.sellmair.rxlifecycle.example
+package io.sellmair.disposer.example
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
-import io.sellmair.rxlifecycle.disposeBy
-import io.sellmair.rxlifecycle.disposers
-import io.sellmair.rxlifecycle.onStop
+import io.sellmair.disposer.disposeBy
+import io.sellmair.disposer.disposers
+import io.sellmair.disposer.onStop
 
 class MainActivity : AppCompatActivity() {
 

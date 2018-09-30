@@ -1,4 +1,4 @@
-package io.sellmair.rxlifecycle
+package io.sellmair.disposer
 
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleOwner

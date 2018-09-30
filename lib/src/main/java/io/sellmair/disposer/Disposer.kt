@@ -1,8 +1,8 @@
-package io.sellmair.rxlifecycle
+package io.sellmair.disposer
 
 import io.reactivex.*
 import io.reactivex.disposables.Disposable
-import io.sellmair.rxlifecycle.internal.LockedDisposer
+import io.sellmair.disposer.internal.LockedDisposer
 
 
 /**

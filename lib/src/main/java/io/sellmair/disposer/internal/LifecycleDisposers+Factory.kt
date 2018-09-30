@@ -1,9 +1,9 @@
 @file:Suppress("unused")
 
-package io.sellmair.rxlifecycle.internal
+package io.sellmair.disposer.internal
 
 import android.arch.lifecycle.Lifecycle
-import io.sellmair.rxlifecycle.LifecycleDisposers
+import io.sellmair.disposer.LifecycleDisposers
 
 
 /*

@@ -1,7 +1,7 @@
-package io.sellmair.rxlifecycle.internal
+package io.sellmair.disposer.internal
 
 import android.arch.lifecycle.Lifecycle
-import io.sellmair.rxlifecycle.LifecycleDisposers
+import io.sellmair.disposer.LifecycleDisposers
 import java.util.*
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock

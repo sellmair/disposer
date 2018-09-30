@@ -1,4 +1,4 @@
-package io.sellmair.rxlifecycle
+package io.sellmair.disposer
 
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable

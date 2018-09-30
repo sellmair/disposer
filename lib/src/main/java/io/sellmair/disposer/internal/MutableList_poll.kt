@@ -1,4 +1,4 @@
-package io.sellmair.rxlifecycle.internal
+package io.sellmair.disposer.internal
 
 /*
 ################################################################################################

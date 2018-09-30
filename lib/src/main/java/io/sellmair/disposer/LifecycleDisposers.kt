@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package io.sellmair.rxlifecycle
+package io.sellmair.disposer
 
 import android.arch.lifecycle.Lifecycle
 import io.reactivex.disposables.Disposable
