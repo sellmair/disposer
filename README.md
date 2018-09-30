@@ -16,7 +16,7 @@ dependencies {
 A ```Disposer``` is the object managing multiple ```Disposable``` instances and disposes them
 at the correct time. 
 
-You can easily add a given disposable to a ```Disposer``:
+You can easily add a given disposable to a ```Disposer```:
 
 ```kotlin
 val disposer: Disposer = /* ... */
