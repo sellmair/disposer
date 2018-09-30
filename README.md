@@ -94,3 +94,19 @@ class MyCoolFragment {
     }
 }
 ```
+
+
+
+##### Advanced: Upstream dispose
+
+It is also possible to put the ```.disposeBy``` call before the ```.subscribe```. 
+But be aware, that this will only dispose the upstream not the downstream, which is 
+often okay, but should only be used with caution!
+
+```kotlin
+awesomDataProvider.query()
+    .flatMap(::pepareForAwesomeness)
+    .filter(::isAwesome)
+    .disposeBy(onStop) // <--- Will dispose everything above it when .onStop() is called
+    .subscribe(::displayAwesomeData)
+```
