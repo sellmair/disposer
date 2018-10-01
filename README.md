@@ -5,7 +5,7 @@ Easily dispose RxJava streams with Android's Lifecycle
 [![Build Status](https://travis-ci.org/sellmair/disposer.svg?branch=master)](https://travis-ci.org/sellmair/disposer)
 ![Bintray](https://img.shields.io/bintray/v/sellmair/sellmair/disposer.svg)
 
-![Medium](https://medium.com/@sellmair/disposing-on-android-the-right-way-97bd55cbf970)
+[Medium](https://medium.com/@sellmair/disposing-on-android-the-right-way-97bd55cbf970)
 
 ### Usage
 
