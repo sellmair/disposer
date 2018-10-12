@@ -2,59 +2,57 @@ package io.sellmair.disposer
 
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleRegistry
+import io.reactivex.Observable
 import io.reactivex.subjects.PublishSubject
-import io.sellmair.disposer.internal.get
-import org.junit.Assert.assertEquals
+import io.reactivex.subjects.Subject
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 
 class LifecycleDisposersTest {
 
     private lateinit var lifecycle: LifecycleRegistry
+    private lateinit var observer: TestObserver
+    private lateinit var subject: Subject<Unit>
+    private lateinit var observable: Observable<Unit>
 
 
     @Before
     fun setup() {
         lifecycle = TestLifecycle.create()
+        observer = TestObserver()
+        subject = PublishSubject.create()
+        observable = subject.map { Unit }
     }
 
     @Test
-    fun store_returnsSameInstance() {
-        val instance1 = LifecycleDisposers.Store[lifecycle]
-        val instance2 = LifecycleDisposers.Store[lifecycle]
-        assertEquals(instance1, instance2)
+    fun subscribeOnResume_disposeOnPause() {
+        lifecycle.markState(Lifecycle.State.RESUMED)
+        val disposable = observable.subscribe(observer).disposeBy(lifecycle.onPause)
+        assertFalse(disposable.isDisposed)
+
+        lifecycle.handleLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+        assertTrue(disposable.isDisposed)
     }
 
     @Test
-    fun onStart_disposes() {
-        val subject = PublishSubject.create<Unit>()
-        val observer = TestObserver()
+    fun subscribeOnStart_disposeOnStop() {
+        lifecycle.markState(Lifecycle.State.STARTED)
+        val disposable = observable.subscribe(observer).disposeBy(lifecycle.onStop)
+        assertFalse(disposable.isDisposed)
 
-        subject
-            .disposeBy(lifecycle.onStart)
-            .subscribe(observer)
-
-        subject.onNext(Unit)
-        lifecycle.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
-        lifecycle.handleLifecycleEvent(Lifecycle.Event.ON_START)
-        subject.onNext(Unit)
-
-        assertEquals(1, observer.nextCount)
+        lifecycle.handleLifecycleEvent(Lifecycle.Event.ON_STOP)
+        assertTrue(disposable.isDisposed)
     }
 
     @Test
-    fun onStart_doesNotDispose() {
-        val subject = PublishSubject.create<Unit>()
-        val observer = TestObserver()
+    fun subscribeOnCreate_disposeOnDestroy() {
+        lifecycle.markState(Lifecycle.State.CREATED)
+        val disposable = observable.subscribe(observer).disposeBy(lifecycle.onDestroy)
+        assertFalse(disposable.isDisposed)
 
-        subject
-            .disposeBy(lifecycle.onStart)
-            .subscribe(observer)
-
-        subject.onNext(Unit)
-        lifecycle.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
-        subject.onNext(Unit)
-
-        assertEquals(2, observer.nextCount)
+        lifecycle.handleLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+        assertTrue(disposable.isDisposed)
     }
 }
