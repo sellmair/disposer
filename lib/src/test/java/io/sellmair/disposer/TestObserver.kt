@@ -1,27 +1,19 @@
 package io.sellmair.disposer
 
-import io.reactivex.Observer
-import io.reactivex.disposables.Disposable
 import java.util.concurrent.atomic.AtomicInteger
+import kotlin.reflect.KProperty
 
-class TestObserver : Observer<Unit> {
+class TestObserver : (Unit) -> Unit {
 
-    private val atomicNextCount = AtomicInteger()
+    private val count = AtomicInteger()
 
-    val nextCount: Int get() = atomicNextCount.get()
+    fun count(): Int = count.get()
 
-    override fun onComplete() {
-    }
-
-    override fun onSubscribe(d: Disposable) {
-    }
-
-    override fun onNext(t: Unit) {
-        atomicNextCount.getAndIncrement()
-    }
-
-    override fun onError(e: Throwable) {
+    override fun invoke(p1: Unit) {
+        count.getAndIncrement()
     }
 
 
 }
+
+operator fun AtomicInteger.getValue(thisRef: Any?, property: KProperty<*>): Int = this.get()
