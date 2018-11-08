@@ -1,7 +1,7 @@
 package io.sellmair.disposer
 
-import android.arch.lifecycle.Lifecycle
-import android.arch.lifecycle.LifecycleRegistry
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleRegistry
 import io.reactivex.Observable
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject

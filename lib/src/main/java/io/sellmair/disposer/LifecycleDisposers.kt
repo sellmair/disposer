@@ -2,7 +2,7 @@
 
 package io.sellmair.disposer
 
-import android.arch.lifecycle.Lifecycle
+import androidx.lifecycle.Lifecycle
 import io.reactivex.disposables.Disposable
 
 /*

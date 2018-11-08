@@ -1,7 +1,7 @@
 package io.sellmair.disposer
 
-import android.arch.lifecycle.Lifecycle
-import android.arch.lifecycle.LifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
 import io.sellmair.disposer.internal.get
 
 /**
