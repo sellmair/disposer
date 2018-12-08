@@ -13,7 +13,7 @@ Checkout my [Medium](https://medium.com/@sellmair/disposing-on-android-the-right
 
 ```groovy
 dependencies {
-    implementation 'io.sellmair:disposer:1.0.0-alpha.1'
+    implementation 'io.sellmair:disposer:1.0.0'
 }
 ```
 

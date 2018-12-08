@@ -1,6 +1,7 @@
 package io.sellmair.disposer.internal
 
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.GenericLifecycleObserver
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
@@ -17,12 +18,9 @@ internal class LifecycleDisposer(
     lifecycle: Lifecycle,
     vararg events: Lifecycle.Event) : Disposer by LockedDisposer() {
 
-    private val observer: LifecycleObserver = object : LifecycleObserver {
-        @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
-        fun onAny(source: LifecycleOwner, event: Lifecycle.Event) {
-            if (events.contains(event)) {
-                dispose()
-            }
+    private val observer: LifecycleObserver = GenericLifecycleObserver { _, event ->
+        if (events.contains(event)) {
+            dispose()
         }
     }
 
