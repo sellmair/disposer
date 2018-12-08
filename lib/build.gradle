@@ -6,7 +6,7 @@ apply plugin: 'maven-publish'
 ext {
     bintrayRepo = 'sellmair'
     bintrayName = 'disposer'
-    libraryVersion = '1.0.0-alpha.1'
+    libraryVersion = '1.0.0'
 
     publishedGroupId = 'io.sellmair'
     libraryName = 'disposer'
@@ -16,7 +16,6 @@ ext {
 
     gitUrl = 'https://github.com/sellmair/disposer'
     siteUrl = 'https://github.com/sellmair/disposer'
-
 
 
     developerId = 'sellmair'
