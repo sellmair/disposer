@@ -1,6 +1,6 @@
 package io.sellmair.disposer.internal
 
-import android.arch.lifecycle.Lifecycle
+import androidx.lifecycle.Lifecycle
 import io.sellmair.disposer.LifecycleDisposers
 import java.util.*
 import java.util.concurrent.locks.ReentrantLock

@@ -1,7 +1,7 @@
 package io.sellmair.disposer.example
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 import io.sellmair.disposer.disposeBy
 import io.sellmair.disposer.disposers
