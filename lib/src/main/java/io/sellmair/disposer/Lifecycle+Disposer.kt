@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package io.sellmair.disposer
 
 import androidx.lifecycle.Lifecycle

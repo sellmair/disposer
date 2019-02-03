@@ -13,7 +13,11 @@ Checkout my [Medium](https://medium.com/@sellmair/disposing-on-android-the-right
 
 ```groovy
 dependencies {
+    // Non AndroidX projects
     implementation 'io.sellmair:disposer:1.1.0'
+    
+    // AndroidX projects
+    implementation 'io.sellmair:disposer:2.0.0'
 }
 ```
 

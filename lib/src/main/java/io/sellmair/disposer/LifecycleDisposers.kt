@@ -69,7 +69,7 @@ class LifecycleDisposers(
 
     /**
      * Factory for [LifecycleDisposers]
-     * @see Factory.create
+     * @see Factory create
      */
     internal object Factory
 
@@ -77,7 +77,7 @@ class LifecycleDisposers(
      * Each [Lifecycle] will have it's own dedicated [LifecycleDisposers] object which
      * can be retrieved from this store.
      *
-     * @see Store.get
+     * @see Store get
      */
     internal object Store
 
