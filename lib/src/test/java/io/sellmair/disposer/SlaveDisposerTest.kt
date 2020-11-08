@@ -1,6 +1,6 @@
 package io.sellmair.disposer
 
-import io.reactivex.disposables.Disposables
+import io.reactivex.rxjava3.disposables.Disposable
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -11,7 +11,7 @@ class SlaveDisposerTest {
         val master = Disposer()
         val slave = Disposer(master)
 
-        val probe = Disposables.empty()
+        val probe = Disposable.empty()
         slave += probe
         master.dispose()
 
@@ -25,7 +25,7 @@ class SlaveDisposerTest {
         val slave = Disposer(master)
 
         repeat(10) {
-            val probe = Disposables.empty()
+            val probe = Disposable.empty()
             slave += probe
             assertFalse(probe.isDisposed)
 

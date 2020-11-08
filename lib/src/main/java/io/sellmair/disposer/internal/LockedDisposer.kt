@@ -1,8 +1,7 @@
 package io.sellmair.disposer.internal
 
-import io.reactivex.*
-import io.reactivex.disposables.Disposable
-import io.reactivex.disposables.Disposables
+import io.reactivex.rxjava3.core.*
+import io.reactivex.rxjava3.disposables.Disposable
 import io.sellmair.disposer.Disposer
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
@@ -45,7 +44,7 @@ internal class LockedDisposer : Disposer {
 
     override fun <T> bind(flowable: Flowable<T>): Flowable<T> {
         return flowable.doOnSubscribe { subscription ->
-            this += Disposables.fromSubscription(subscription)
+            this += Disposable.fromSubscription(subscription)
         }
     }
 
