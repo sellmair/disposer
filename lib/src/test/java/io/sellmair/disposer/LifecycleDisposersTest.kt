@@ -2,9 +2,9 @@ package io.sellmair.disposer
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleRegistry
-import io.reactivex.Observable
-import io.reactivex.subjects.PublishSubject
-import io.reactivex.subjects.Subject
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.subjects.PublishSubject
+import io.reactivex.rxjava3.subjects.Subject
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before

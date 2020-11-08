@@ -3,7 +3,6 @@
 package io.sellmair.disposer
 
 import androidx.lifecycle.Lifecycle
-import io.reactivex.disposables.Disposable
 
 /*
 ################################################################################################
