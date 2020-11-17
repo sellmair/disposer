@@ -1,5 +1,6 @@
 package io.sellmair.disposer.internal
 
+import io.reactivex.*
 import io.reactivex.rxjava3.core.*
 import io.reactivex.rxjava3.disposables.Disposable
 import io.sellmair.disposer.Disposer
