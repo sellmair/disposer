@@ -28,7 +28,7 @@ class LifecycleDisposersTest {
 
     @Test
     fun subscribeOnResume_disposeOnPause() {
-        lifecycle.markState(Lifecycle.State.RESUMED)
+        lifecycle.currentState = Lifecycle.State.RESUMED
         val disposable = observable.subscribe(observer).disposeBy(lifecycle.onPause)
         assertFalse(disposable.isDisposed)
 
@@ -38,7 +38,7 @@ class LifecycleDisposersTest {
 
     @Test
     fun subscribeOnStart_disposeOnStop() {
-        lifecycle.markState(Lifecycle.State.STARTED)
+        lifecycle.currentState = Lifecycle.State.STARTED
         val disposable = observable.subscribe(observer).disposeBy(lifecycle.onStop)
         assertFalse(disposable.isDisposed)
 
@@ -48,7 +48,7 @@ class LifecycleDisposersTest {
 
     @Test
     fun subscribeOnCreate_disposeOnDestroy() {
-        lifecycle.markState(Lifecycle.State.CREATED)
+        lifecycle.currentState = Lifecycle.State.CREATED
         val disposable = observable.subscribe(observer).disposeBy(lifecycle.onDestroy)
         assertFalse(disposable.isDisposed)
 

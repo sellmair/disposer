@@ -63,7 +63,7 @@ interface Disposer : Disposable {
 
         /**
          *  Syntactically sweeter version of [create]
-         *  
+         *
          *  @see create
          */
         operator fun invoke(master: Disposer? = null) = this.create(master)
