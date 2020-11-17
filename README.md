@@ -16,8 +16,11 @@ dependencies {
     // Non AndroidX projects
     implementation 'io.sellmair:disposer:1.1.0'
     
-    // AndroidX projects
+    // AndroidX projects rxjava2
     implementation 'io.sellmair:disposer:2.0.0'
+    
+    // AndroidX projects rxjava3    
+    implementation 'io.sellmair:disposer:3.0.0'
 }
 ```
 
